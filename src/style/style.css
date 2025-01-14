@@ -38,15 +38,15 @@ body {
     color: var(--green);
 }
 
-.section{
+section {
     padding: 50px 0;
 }
 
 
 .food-list-box-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-gap: 50px;
 }
 
 .food-item-wrapper {
@@ -87,7 +87,7 @@ body {
     color: var(--orange);
 }
 
-.search-box-wrapper{
+.search-box-wrapper {
     margin-bottom: 50px;
 }
 
@@ -104,4 +104,48 @@ body {
     line-height: 1.2;
     border: 2px solid var(--green-v1);
     border-radius: 5px;
+}
+
+.food-detail-wrapper {
+    position: sticky;
+    top: 10px;
+    height: 100vh;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+
+.food-detail-wrapper .heading {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.food-detail-wrapper .main-heading {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.food-detail-wrapper .text{
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--green-v1);
+}
+
+
+.card-info-box{
+    margin-bottom: 30px;
+}
+
+.food-inner-detail-wrapper{
+    padding: 20px 30px;
 }

@@ -1,4 +1,4 @@
-export default function FoodItem({ food }) {
+export default function FoodItem({ food, setFoodId }) {
     return (
         <div className="food-item-wrapper">
             <div className="food-item-inner-wrapper">
@@ -12,7 +12,7 @@ export default function FoodItem({ food }) {
                         </h4>
                     </div>
                     <div className="food-btn-box">
-                        <button>View</button>
+                        <button onClick={()=> setFoodId(food.id)}>View</button>
                     </div>
                 </div>
             </div>
