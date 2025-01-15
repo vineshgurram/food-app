@@ -13,7 +13,8 @@ export default function FoodDetail({ foodId }) {
             const response = await fetch(`${URL}?apiKey=${API_KEY}`);
             const result = await response.json();
             console.log(result);
-            setFood(result)
+            setFood(result);
+            setLoading(true);
         }
         fetchFoodDetail();
     }, [foodId]);
@@ -44,6 +45,16 @@ export default function FoodDetail({ foodId }) {
                             __html: food.instructions || "<p>No instructions available</p>",
                         }}
                     />
+                </div>
+                <div className="food-info-box">
+                <h2 className="heading">
+                Ingredients
+                    </h2>
+                    <ol className="text">
+                     {
+                        loading ? food.extendedIngredients.map(item => <li key={item.id}><img src={`https://api.spoonacular.com/recipes/${item.id}/${item.image}`} alt="" /> {item.aisle}</li>): "not loading"
+                     }
+                    </ol>
                 </div>
             </div>
         </div >

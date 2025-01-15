@@ -110,6 +110,7 @@ section {
     position: sticky;
     top: 10px;
     height: 100vh;
+    overflow: auto;
 }
 
 
@@ -148,4 +149,8 @@ section {
 
 .food-inner-detail-wrapper{
     padding: 20px 30px;
+}
+
+.food-info-box{
+    margin-bottom: 30px;
 }
